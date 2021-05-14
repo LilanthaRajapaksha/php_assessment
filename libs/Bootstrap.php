@@ -25,7 +25,8 @@ class Bootstrap
             require $file;
         } else {
             require 'controllers/Errors.php';
-            new Errors();
+            $controller = new Errors();
+            $controller->index();
             return false;
         }
 

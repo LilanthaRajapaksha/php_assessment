@@ -19,5 +19,12 @@
             <input type="date" class="form-control" id="end_date" placeholder="Enter end date" name="end_date" required>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
+        <br/><br/>
+        <?php if (Session::get('showErrors') == true) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo Session::get('errorMessage'); ?>
+            </div>
+        <?php } ?>
+
     </form>
 </div>

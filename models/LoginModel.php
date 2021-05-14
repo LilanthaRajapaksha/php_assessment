@@ -23,8 +23,11 @@ class LoginModel extends Model
             Session::set('useName', $data[0]['name']);
             Session::set('startDate', $_POST['start_date']);
             Session::set('endDate', $_POST['end_date']);
+            Session::set('showErrors', false);
             header('location: ../campaigns');
         } else {
+            Session::set('showErrors', true);
+            Session::set('errorMessage', 'You are not authorized');
             header('location: ../index');
         }
 

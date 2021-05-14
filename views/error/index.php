@@ -1,1 +1,2 @@
-<?php echo $this->view->msg; ?>
+<?php echo $this->msg; ?>
+
