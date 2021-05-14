@@ -10,7 +10,7 @@ class Errors extends Controller
 
     function index()
     {
-        $this->view->msg = 'This page don not exist';
+        $this->view->msg = 'This page does not exist';
         $this->view->render('error/index');
     }
 
